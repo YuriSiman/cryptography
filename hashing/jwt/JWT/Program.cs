@@ -53,7 +53,7 @@ byte[] chave = new byte[16];
 RandomNumberGenerator.Fill(chave);
 
 // Para testar com uma chave fixa
-//byte[] chave = Encoding.UTF8.GetBytes("bruno");
+//byte[] chave = Encoding.UTF8.GetBytes("teste");
 var hmac = new HMACSHA256(chave);
 var signatureBytes = hmac.ComputeHash(Encoding.UTF8.GetBytes(signatureSegment));
 
